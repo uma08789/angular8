@@ -1,0 +1,22 @@
+<div class="login">  
+   <div *ngIf="errMsg" class="alert alert-danger mt-3 mb-0">{{errMsg}}</div>
+  <h2 class="login-header">Log in</h2>
+  <form #loginform="ngForm" class="login-container" (ngSubmit)="loginUser(loginform)">
+
+    <mat-form-field>
+      <input matInput placeholder="Email" type="email" ngModel name="email" #title="ngModel" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required> 
+      <mat-error *ngIf="title.invalid">Please enter valid email</mat-error>       
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Enter your password" type="password"  ngModel name="password" #title="ngModel" required>      
+      <mat-error *ngIf="title.invalid">Please enter password</mat-error>  
+    </mat-form-field>
+    <p>
+      <input type="submit" value="Log in">
+    </p>
+    <a *ngIf="!this.authService.isLoggedIn()" class="btn btn-outline-primary" routerLinkActive="active"
+    routerLinkActive="active" routerLink="/register">New User? Click Here to Register</a>
+
+  </form>
+</div>

@@ -1,0 +1,47 @@
+<h2 class="product-header"> List of Products 
+  <span><a [routerLink]="['/product-add']" class="btn btn-primary">ADD Product</a></span>
+</h2>
+<div *ngIf="!MyDataSource > 0" class="mat-elevation-z8">
+   <div class="noRecord">Products not available</div>
+</div>
+
+  <div  *ngIf="MyDataSource" class="mat-elevation-z8">
+  <mat-table [dataSource]="MyDataSource" matSort id="contentToConvert">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+      <mat-cell *matCellDef="let obj; let i = index;"> {{ i + 1 }} </mat-cell>
+    </ng-container>    
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="ProductName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Product Name </mat-header-cell>
+      <mat-cell *matCellDef="let obj"> {{obj.ProductName}} </mat-cell>
+    </ng-container>
+
+    <!-- Price Column -->
+    <ng-container matColumnDef="ProductPrice">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Product Price </mat-header-cell>
+      <mat-cell *matCellDef="let obj"> {{obj.ProductPrice}} </mat-cell>
+    </ng-container>
+
+    <!-- Quantity Column -->
+    <ng-container matColumnDef="ProductQuantity">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Product Quantity </mat-header-cell>
+      <mat-cell *matCellDef="let obj"> {{obj.ProductQuantity}} </mat-cell>
+    </ng-container>
+
+    <!-- Action Items -->
+    <ng-container  matColumnDef="ActionItems">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Action Items </mat-header-cell>       
+      <mat-cell *matCellDef="let obj" class="action-link"> <a [routerLink]="['/product-edit', obj._id]">Edit</a>&nbsp;
+    <a (click) = "deleteProduct(obj._id)" class="btn btn-danger">Delete</a> </mat-cell>
+    </ng-container>    
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

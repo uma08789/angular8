@@ -1,0 +1,14 @@
+.mat-tab-label-container {
+    padding: 0px 20px;
+    border: 1px solid lightgrey;    
+}
+.mat-tab-body-content {
+    height: unset !important;
+    overflow: auto;
+    padding: 10px 50px;
+    border: 1px solid lightgrey;
+}
+.mat-tab-icon {
+  margin-right: 8px;
+}
+

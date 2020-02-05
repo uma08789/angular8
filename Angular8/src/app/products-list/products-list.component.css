@@ -1,0 +1,33 @@
+.product-header
+ {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.product-header {
+  
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #b12fb9;
+}
+
+.btn {
+  padding: .205rem .25rem;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.product-header span {
+    float: right;
+}
+
+.noRecord {
+  font-size:2rem;
+  padding:50px;
+  text-align: center;
+  color:orange;
+}

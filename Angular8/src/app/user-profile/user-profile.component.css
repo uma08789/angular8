@@ -1,0 +1,32 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+}
+  
+.profile-container > * {
+  width: 70%;
+  margin: 0 auto;
+  padding:10px;  
+}
+
+.profile {
+  width: 50%;
+  margin: 16px auto;
+  font-size: 16px;
+  border:1px solid rgb(122, 85, 156);
+}
+
+.profile-header {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.profile-header {
+  background: rgb(122, 85, 156);
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}

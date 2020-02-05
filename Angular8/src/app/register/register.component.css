@@ -1,0 +1,48 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+}
+  
+.register-container > * {
+  width: 70%;
+  margin: 0 auto;  
+}
+
+.title-center {
+  margin: 0 auto;
+}
+
+.mat-form-field {
+  display: block;
+}
+
+table {
+  width: 100%;
+}
+
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  text-align: center;
+}
+
+.register {
+  width: 50%;
+  margin: 16px auto;
+  font-size: 16px;
+  border:1px solid rgb(122, 85, 156);
+}
+
+.register-header,
+.register p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.register-header {
+  background: rgb(122, 85, 156);
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}

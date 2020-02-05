@@ -1,0 +1,32 @@
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="mat-tab-icon">thumb_up</mat-icon>
+      Product Display
+    </ng-template>
+    <ngb-carousel>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/images/mobilesams.jpeg" alt="Angular Carousel 1">
+    </div>
+    
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/images/mobileclarity.jpeg" alt="Angular Carousel 2">
+    </div>   
+  </ng-template>
+</ngb-carousel>
+  
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="mat-tab-icon">thumb_up</mat-icon>
+      Product Stock
+    </ng-template>
+   <p-chart type="line" [data]="data"></p-chart>
+  </mat-tab>  
+</mat-tab-group>
+
+
